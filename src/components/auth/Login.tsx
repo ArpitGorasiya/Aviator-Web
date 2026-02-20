@@ -42,7 +42,7 @@ const Login = () => {
             <p className="text-black text-2xl md:text-3xl leading-[45px] font-semibold">
               Welcome to Aviatefinder
             </p>
-            <p className="text-secondary text-base md:text-2xl sm:text-lg font-normal">
+            <p className="text-secondary text-base md:text-lg sm:text-lg font-normal">
               Please sign in to continue
             </p>
           </div>
@@ -79,7 +79,7 @@ const Login = () => {
             Login
           </Button>
           <div className="text-center mt-5">
-            <span className="text-lg font-medium text-secondary">
+            <span className="text-lg font-normal text-secondary">
               Don’t have an account?{" "}
               <Link href="/register" className="text-primary">
                 Register

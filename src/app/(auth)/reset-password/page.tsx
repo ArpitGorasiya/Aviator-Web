@@ -1,5 +1,7 @@
-import ResetPassword from "@/page/auth/ResetPassword";
+"use client";
+
 import React from "react";
+import ResetPassword from "@/components/auth/ResetPassword";
 
 const ResetPasswordPage: React.FC = () => {
   return <ResetPassword />;

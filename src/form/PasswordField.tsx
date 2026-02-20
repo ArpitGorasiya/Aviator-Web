@@ -1,3 +1,5 @@
+"use client";
+
 import { FormControl, FormField, FormItem } from "@/components/ui/form";
 import { useFormContext } from "react-hook-form";
 import { cn } from "@/lib/utils";
@@ -5,14 +7,7 @@ import { get } from "lodash";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { EYE_ICON, EYE_SLASH_ICON } from "@/lib/images";
-
-interface IPasswordField {
-  name: string;
-  placeholder?: string;
-  label?: string;
-  className?: string;
-  prefix?: React.ReactNode | null;
-}
+import { IPasswordField } from "@/types/form";
 
 const PasswordField = ({
   name,
@@ -54,7 +49,7 @@ const PasswordField = ({
                         : "text-black disabled:text-[#969696f2] focus-visible:ring-main",
                       prefix ? "pl-[50px] sm:pl-[55px]" : "",
                       "pr-[50px] sm:pr-[55px]",
-                      className
+                      className,
                     )}
                     {...other}
                   />
@@ -63,7 +58,7 @@ const PasswordField = ({
                   <div
                     className={cn(
                       "absolute flex items-center",
-                      "top-[13.5px] sm:top-[18px] left-[16px] sm:left-[20px]"
+                      "top-[13.5px] sm:top-[18px] left-[16px] sm:left-[20px]",
                     )}
                   >
                     {prefix}
@@ -73,7 +68,7 @@ const PasswordField = ({
                   <div
                     className={cn(
                       "absolute flex items-center",
-                      "top-[13.5px] sm:top-[18px] right-[16px] sm:right-[20px]"
+                      "top-[13.5px] sm:top-[18px] right-[16px] sm:right-[20px]",
                     )}
                   >
                     <img

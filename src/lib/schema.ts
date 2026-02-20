@@ -44,9 +44,11 @@ const LoginSchema = yup.object().shape({
 });
 
 const ForgotPasswordSchema = yup.object().shape({
-  countryFlag: yup.string().trim().required("Please select country"),
-  countryCode: yup.string().trim().required("Please select country code"),
-  phoneNumber: phoneNumberSchema,
+  email: yup
+    .string()
+    .trim()
+    .required("Please enter email")
+    .matches(emailRegex, "Please enter a valid email address"),
 });
 
 const VerifyOTPSchema = yup.object().shape({
